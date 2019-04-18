@@ -6,7 +6,7 @@ Mail Importer for Gmail will import your emails on a POP3-server in closed netwo
 ## Install
 1. Package install
 ```sh
-pip install --upgrade google-api-python-client
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
 
 2. Turn on the Gmail API and move *Credentials* file to your working directory and rename it `client_secret.json`
@@ -22,7 +22,7 @@ pip install --upgrade google-api-python-client
 
 ## Build exe file
 ```
-pip install --upgrade google-api-python-client
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 pip install --upgrade pyinstaller
 pyinstaller --clean --onefile --log-level=WARN gi.py
 ```
@@ -62,6 +62,5 @@ optional arguments:
                         Ctrl+c if you want stop program.
   --nocache             Ignore seen flag cache.
   -d, --debug           Enable debug message.
-
 ```
 
